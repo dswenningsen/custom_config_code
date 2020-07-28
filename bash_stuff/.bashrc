@@ -57,8 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-     PS1="\[\e[33m\][\[\e[m\]\[\e[33m\]\d\[\e[m\]\[\e[33m\]_\[\e[m\]\[\e[33m\]\t\[\e[m\]\[\e[33m\]]\[\e[m\]\[\e[31;40m\]\u\[\e[m\]\[\e[31;40m\]:\[\e[m\]\[\e[36m\]\W\[\e[m\] "
-     #PS1="\[\033[38;5;226m\][\[$(tput sgr0)\]\[\033[38;5;220m\]\d-\t\[$(tput sgr0)\]\[\033[38;5;226m\]]\[$(tput sgr0)\]\[\033[38;5;1m\]\u@\h:\[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]> \[$(tput sgr0)\]"
+	PS1="\[\e[33m\][\[\e[m\]\[\e[33m\]\h\[\e[m\]\[\e[33m\]]\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[34m\]\W\[\e[m\]> "     
+#PS1="\[\033[38;5;226m\][\[$(tput sgr0)\]\[\033[38;5;220m\]\d-\t\[$(tput sgr0)\]\[\033[38;5;226m\]]\[$(tput sgr0)\]\[\033[38;5;1m\]\u@\h:\[$(tput sgr0)\]\[\033[38;5;4m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]> \[$(tput sgr0)\]"
 #  PS1='[`date  +"%d-%b-%y %T"`] > '
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -118,3 +118,7 @@ fi
 # test "$(ps -ocommand= -p $PPID | awk '{print $1}')" == 'script' || (script -f $HOME/SCRIPTS/$(date +"%d-%b-%y_%H-%M-%S")_shell.log)
 
 
+   if [[ ":$PATH:" != *":./bin:"* ]]; then 
+       export PATH="${PATH}:./bin:/root/Documents/labtainer/trunk/scripts/designer/bin"
+       export LABTAINER_DIR=/trunk
+   fi
