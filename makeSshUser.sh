@@ -10,4 +10,9 @@ chmod 600 $baseDir/.ssh/authorized_keys
 ssh-keygen -t rsa -b 4096 -C "$baseDir" -f $baseDir/.ssh/id_rsa
 cat $baseDir/.ssh/id_rsa.pub >> $baseDir/.ssh/authorized_keys
 chown -R $1:$1 $baseDir
+if [ $2 = "sudo" ]
+then
+  usermod -a -G sudo $1
+fi
+echo "Script Complete"
 
