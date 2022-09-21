@@ -14,5 +14,6 @@ if [ $2 = "sudo" ]
 then
   usermod -a -G sudo $1
 fi
+usermod -aG ssl-cert $1
 echo "Script Complete"
 
