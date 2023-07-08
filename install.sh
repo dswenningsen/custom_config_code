@@ -1,5 +1,7 @@
 #! /bin/bash
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 cp bash_stuff/.bash* $HOME/
 cp bash_stuff/.bash* /root/
 
@@ -13,4 +15,3 @@ cp z/z.sh /bin/
 
 cp vim_stuff/.vim* $HOME/
 cp vim_stuff/.vim* /root/
-
