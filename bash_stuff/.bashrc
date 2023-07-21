@@ -122,3 +122,4 @@ fi
        export PATH="${PATH}:./bin:/root/Documents/labtainer/trunk/scripts/designer/bin"
        export LABTAINER_DIR=/trunk
    fi
+eval "$(oh-my-posh init bash --config ~/.mytheme.omp.json)"
