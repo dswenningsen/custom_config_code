@@ -9,6 +9,7 @@ echo "Done copying to /usr/share/fonts"
 unzip /usr/share/fonts/CascadiaCode.zip
 rm /usr/share/fonts/CascadiaCode.zip
 fc-cache -fv
+fc-cache -r
 cp .mytheme.omp.json ~/
 
 
