@@ -257,7 +257,6 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 eval "$(oh-my-posh init zsh --config ~/.mytheme.omp.json)"
 alias ll='ls -al'
-export PATH=${PATH}:./bin:/home/dilly/.local/bin
 export PATH=${PATH}:/root/.local/bin
 . /bin/z.sh
-
+. ~/.zsh_aliases
