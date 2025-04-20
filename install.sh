@@ -16,8 +16,8 @@ fc-cache -r
 cp .mytheme.omp.json ~/
 
 
-cp bash_stuff/.bash* $HOME/
-cp bash_stuff/.bash* /root/
+cp shell_stuff/.bash* $HOME/
+cp shell_stuff/.bash* /root/
 
 cp msfconsole_stuff/msfconsole.rc $HOME/
 cp msfconsole_stuff/msfconsole.rc /root/
